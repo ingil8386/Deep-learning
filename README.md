@@ -52,7 +52,7 @@ def show_n(images, titles=('',)):
   plt.show()
 
 
-content_image_url = 'https://postfiles.pstatic.net/MjAyMDExMDJfOTQg/MDAxNjA0MjgzOTU2OTgz.hWs8M9rzZmEEpxyBS_xmA5Y_4qVWFUfqNOfgtg2yZDIg.DN2tDtPOM_7qbvrt49GuK-eN1aSjLop6TBgB8C_VS0kg.JPEG.soo_os/1392391841598-1.jpg?type=w2'  
+content_image_url = 'https://a.cdn-hotels.com/gdcs/production174/d1060/8ab26d42-60ff-42a4-913f-f0e925a58f18.jpg'  
 style_image_url = 'https://www.artinsight.co.kr/data/tmp/1912/20191210235617_eostfpur.jpg'  
 
 output_image_size = 384  # @param {type:"integer"}
