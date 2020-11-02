@@ -12,7 +12,6 @@ print("TF Version: ", tf.__version__)
 print("TF-Hub version: ", hub.__version__)
 print("Eager mode enabled: ", tf.executing_eagerly())
 print("GPU available: ", tf.test.is_gpu_available())
-# @title Define image loading and visualization functions  { display-mode: "form" }
 
 def crop_center(image):
   """Returns a cropped square image."""
@@ -27,9 +26,7 @@ def crop_center(image):
 @functools.lru_cache(maxsize=None)
 def load_image(image_url, image_size=(256, 256), preserve_aspect_ratio=True):
   """Loads and preprocesses images."""
-  # Cache image file locally.
   image_path = tf.keras.utils.get_file(os.path.basename(image_url)[-128:], image_url)
-  # Load and convert to float32 numpy array, add batch dimension, and normalize to range [0, 1].
   img = plt.imread(image_path).astype(np.float32)[np.newaxis, ...]
   if img.max() > 1.0:
     img = img / 255.
@@ -52,17 +49,13 @@ def show_n(images, titles=('',)):
     plt.title(titles[i] if len(titles) > i else '')
   plt.show()
 
-  # @title Load example images  { display-mode: "form" }
 
-content_image_url = 'https://postfiles.pstatic.net/MjAyMDExMDJfOTQg/MDAxNjA0MjgzOTU2OTgz.hWs8M9rzZmEEpxyBS_xmA5Y_4qVWFUfqNOfgtg2yZDIg.DN2tDtPOM_7qbvrt49GuK-eN1aSjLop6TBgB8C_VS0kg.JPEG.soo_os/1392391841598-1.jpg?type=w2'  # @param {type:"string"}
-style_image_url = 'https://www.artinsight.co.kr/data/tmp/1912/20191210235617_eostfpur.jpg'  # @param {type:"string"}
+content_image_url = 'https://postfiles.pstatic.net/MjAyMDExMDJfOTQg/MDAxNjA0MjgzOTU2OTgz.hWs8M9rzZmEEpxyBS_xmA5Y_4qVWFUfqNOfgtg2yZDIg.DN2tDtPOM_7qbvrt49GuK-eN1aSjLop6TBgB8C_VS0kg.JPEG.soo_os/1392391841598-1.jpg?type=w2'  
+style_image_url = 'https://www.artinsight.co.kr/data/tmp/1912/20191210235617_eostfpur.jpg'  
+
 output_image_size = 384  # @param {type:"integer"}
 
-# The content image size can be arbitrary.
 content_img_size = (output_image_size, output_image_size)
-# The style prediction model was trained with image size 256 and it's the 
-# recommended image size for the style image (though, other sizes work as 
-# well but will lead to different results).
 style_img_size = (256, 256)  # Recommended to keep it at 256.
 
 content_image = load_image(content_image_url, content_img_size)
