@@ -75,5 +75,8 @@ stylized_image = outputs[0]
 show_n([content_image, style_image, stylized_image], titles=['Original content image', 'Style image', 'Stylized image'])
 ```
 
-#소감
+# 소감
+딥러닝을 활용하여 한개의 영상에다 하나의 이미지와 관련한 이미지로 변환하여 새로운 멋진 영상을 만들어내는 것이 너무 놀랍습니다.
+여러가지 이미지를 가지고 원본이미지를 변환해보니 정말 재밌습니다. 
+
 
