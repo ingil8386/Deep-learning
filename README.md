@@ -1,6 +1,6 @@
 # Deep-learning
 
-''
+```
 import functools
 import os
 
@@ -73,7 +73,6 @@ stylized_image = outputs[0]
 outputs = hub_module(tf.constant(content_image), tf.constant(style_image))
 stylized_image = outputs[0]
 show_n([content_image, style_image, stylized_image], titles=['Original content image', 'Style image', 'Stylized image'])
-''
-
+```
 
 #소감
