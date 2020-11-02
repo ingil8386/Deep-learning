@@ -1,5 +1,5 @@
 # Deep-learnin 딥러닝 영상처리 실습 Image Transfer로 고흐 풍의 내 사진 만들기
-## 20171132정인길
+## 안동대학교 컴퓨터공학과 20171132 
 ```
 import functools
 import os
@@ -76,3 +76,4 @@ show_n([content_image, style_image, stylized_image], titles=['Original content i
 ```
 
 #소감
+
