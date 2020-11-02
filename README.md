@@ -1,4 +1,4 @@
-# Deep-learnin 딥러닝 영상처리 실습 Image Transfer로 고흐 풍의 내 사진 만들기
+# 딥러닝 영상처리 실습 Image Transfer로 고흐 풍의 내 사진 만들기
 ## 안동대학교 컴퓨터공학과 20171132 
 ```
 import functools
